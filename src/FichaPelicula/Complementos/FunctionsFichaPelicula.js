@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 nombreUsuario = nombreIngresado;
                 // Opcional: Ocultar el mensaje de error si estaba visible anteriormente
             } else {
-                // Aquí llamas a la función para mostrar el mensaje de error
                 mostrarErrorMensaje(inputNombre, 'El nombre solo debe contener letras y espacios.');
             }
         });

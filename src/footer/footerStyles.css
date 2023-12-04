@@ -11,60 +11,97 @@
 html, body {
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
 }
 
 .footer-general {
     color: rgba(255, 255, 255, 0.788);
-    background: #ff2c1f; /* Cambia el color según prefieras */
-    display: flex;
-    justify-content: space-around;
-    align-items: center; /* Centrar contenido verticalmente */
-    padding: 20px 0; /* Padding superior e inferior */
-    margin: 0; /* Restablecer márgenes */
-    width: 100%; /* Asegurar el ancho completo */
+    background: #ff2c1f;
+    padding: 20px 0;
     width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
 }
 
+/* Estilo para el contenedor principal del pie de página */
 .footer-container {
-    max-width: 100%;
-    padding: 0;
-}
-
-.footer-content {
     display: flex;
     justify-content: space-evenly;
-    align-items: baseline;
-    flex-wrap: wrap;
-    align-content: stretch;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer-name h4,
+.footer-disclaimer p,
+.footer-quejas p {
+    margin-bottom: 10px;
+}
+
+/* Estilos para la sección de nombre, descargo de responsabilidad y quejas */
+.footer-name,
+.footer-disclaimer,
+.footer-quejas {
+    text-align: left;
+}
+
+/* Estilos para los enlaces de redes sociales */
+.footer-social {
+    text-align: right;
 }
 
 .footer-social ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
 }
 
-.footer-social li {
-    display: inline;
-    margin-right: 10px;
+.footer-social ul li {
+    margin-left: 10px;
+}
+
+.footer-social ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 a {
-    color: black;
     text-decoration: none;
+    color: black;
 }
 
-.footer-disclaimer {
-    text-align: center;
-    font-size: 15px;
+.footer-social ul li a i {
+    line-height: 40px;
 }
 
-.footer-quejas{
-    text-align: center;
-    font-size: 12px;
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-social ul {
+        justify-content: center;
+        padding-top: 20px;
+    }
+    .footer-social ul li {
+        margin: 0 5px;
+    }
 }
