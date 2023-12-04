@@ -18,6 +18,9 @@ function GenerarNavBuscador() {
             <div class="footer-disclaimer">
                 <p>&copy; 2023 CINEPIA. Todos los derechos reservados.</p>
             </div>
+            <div class="footer-quejas">
+                <p>Dirección General de Defensa y Protección al Consumidor: Para consultas y/o denuncias haga <a href="https://buenosaires.gob.ar/jefaturadegabinete/atencion-ciudadana-y-gestion-comunal/defensa-al-consumidor">click aquí</a></p>
+            </div>
     </div>
     `;
     return footNav;

@@ -10,6 +10,7 @@ async function CargarFunciones(id, pelicula) {
     } else {
         let contador = 0;
         for (const funcion of pelicula.funciones) {
+            if (contador >= 9) break;
             // console.log(`Función ID: ${funcion.funcionId} Fecha: ${funcion.fecha}`);
             if (ObtenerDate(funcion.fecha) >= new Date(ObtenerDiaDeHoy())) {
                 const cantTickets = await ApiTicket.GetCantTickets(funcion.funcionId);
@@ -51,6 +52,5 @@ function ObtenerDiaDeHoy()
 }
 
 function ObtenerDate(fechaString) {
-    // Suponiendo que fechaString es "YYYY-MM-DD"
     return new Date(fechaString);
 }

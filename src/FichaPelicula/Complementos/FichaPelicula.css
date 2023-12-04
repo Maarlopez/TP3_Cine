@@ -176,9 +176,9 @@ h1:hover {
 
 /* Estilos para las celdas de la tabla */
 .tabla-tecnica th, .tabla-tecnica td {
-    text-align: center;
+    /* text-align: center; */
     padding: 8px; 
-    color: #ffffff; /* Establece el color del texto, ajusta según sea necesario */
+    color: #ffffff;
 }
 
 .etiqueta {

@@ -8,8 +8,6 @@ export default function GenerarFichaTecnica(pelicula) {
             <img src="${pelicula.poster}" class="imagen-ficha" >
         </div>
         <div class="ficha-tecnica">
-
-            <!-- Incluso podría crear un foreach que me cree esto, total tiene el mismo nombre de las variables-->
             <table class="tabla-tecnica">
                 <thead>
                     <tr>
@@ -17,14 +15,6 @@ export default function GenerarFichaTecnica(pelicula) {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th>
-                            <h5>TITULO:</h5>
-                        </th>
-                        <th>
-                            ${pelicula.titulo.toUpperCase()}
-                        </th>
-                    </tr>
                     <tr>
                         <th>
                             <h5>GENERO:</h5>

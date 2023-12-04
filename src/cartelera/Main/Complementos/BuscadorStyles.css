@@ -26,7 +26,6 @@ input:focus {
   margin-top: 2%;
   background-color: #fff;
 }
-/*Fin buscador */
 
 /* Menu Desplegable */
 .container-filtrador {
@@ -38,7 +37,7 @@ input:focus {
 
 .menu-filtro {
   list-style: none;
-  padding-left: 5px;
+  padding-left: 100px;
   margin: 0px;
   width: auto;
 }
@@ -100,15 +99,7 @@ input:focus {
   opacity: 1;
 }
 
-/* Fin menu desplegable */
-
-/* Filtro de búsqueda */
-
 .buscador-personalizado {
-  /* display: flex;
-  max-width: 550px;
-  align-items: center;
-  justify-content: start; */
   display: flex;
   max-width: 550px;
   align-items: center;
