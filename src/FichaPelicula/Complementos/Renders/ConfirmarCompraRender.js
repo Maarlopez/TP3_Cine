@@ -7,6 +7,7 @@ export default function GenerarCompra(funcionId,horario,fecha,disponibles) {
         <span class='texto-compra' id="horario"> HORARIO: ${horario} </span>
         <span class='texto-compra' id="disponibles" data-value=${disponibles}> DISPONIBLES: ${disponibles} </span>
         <input type="text" placeholder="Ingrese su nombre" class="input-nombre" id='input-nombre'>
+        <div id="nombreError" class="error-message" style="display:none;">El nombre solo debe contener letras y espacios.</div>
         <div class="boton-comprar">
             <span class="botones-aum-dis bor-izq" id="disminuir"><i class='bx bx-minus'></i></span> 
             <span class="cantidad-boletos" id="contador-boletos">0</span>

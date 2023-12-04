@@ -20,8 +20,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const inputNombre = funcionesContainer.querySelector('.input-nombre');
         inputNombre.addEventListener('input', (event) => {
-            nombreUsuario = event.target.value;
+            const nombreIngresado = event.target.value;
+            if (validarNombreUsuario(nombreIngresado)) {
+                nombreUsuario = nombreIngresado;
+                // Opcional: Ocultar el mensaje de error si estaba visible anteriormente
+            } else {
+                // Aquí llamas a la función para mostrar el mensaje de error
+                mostrarErrorMensaje(inputNombre, 'El nombre solo debe contener letras y espacios.');
+            }
         });
+
+        
+        
 
         let resultadoTicket=null;
 
@@ -117,7 +127,21 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 });
 
+function validarNombreUsuario(input) {
+    // Expresión regular que acepta solo letras (mayúsculas y minúsculas) y espacios
+    const regex = /^[a-zA-Z\s]+$/;
+    return regex.test(input);
+}
 
+function mostrarErrorMensaje(inputElement, errorMessage) {
+    // Asegúrate de que solo se cree un mensaje de error a la vez
+    if (!inputElement.nextElementSibling || !inputElement.nextElementSibling.classList.contains('error-mensaje')) {
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-mensaje';
+        errorDiv.textContent = errorMessage;
+        inputElement.parentNode.insertBefore(errorDiv, inputElement.nextSibling);
+    }
+}
 
 function mostrarModal() {
     modal.style.display = 'block';

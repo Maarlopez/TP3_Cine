@@ -1,4 +1,3 @@
-import GenerarPeliculas from './GenerarPeliculasBusquedaNav.js';
 function GenerarNavBuscador() {
     const barraNav = document.createElement('nav');
     barraNav.className = 'navegacion';
@@ -9,6 +8,9 @@ function GenerarNavBuscador() {
         <ul class="menu">
             <li class="left-links menu-opciones"> 
                 <a href="../../src/cartelera/cartelera.html">CARTELERA</a> </li>
+            </li>
+            <li class="left-links menu-opciones"> 
+                <a href="../../src/Promociones/promociones.html">PROMOCIONES</a> </li>
             </li>
         </ul>
     `;

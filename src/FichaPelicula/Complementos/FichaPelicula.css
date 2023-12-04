@@ -59,6 +59,12 @@ h1:hover {
     border-collapse: collapse; /* Elimina el espacio entre las celdas si es necesario */
 }
 
+
+.error-mensaje {
+    color: red;
+    justify-content: center;
+  }
+
 .tabla-tecnica th,
 .tabla-tecnica td,
 .titulo-imagen,
@@ -67,9 +73,14 @@ h1:hover {
     font-weight: normal;
 }
 
+.tabla-tecnica th h5{
+    font-size: 15px;
+    padding-top: 3px;
+}
+
 .tabla-tecnica th 
 {
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
     text-align: left;
 }
 
