@@ -4,16 +4,8 @@ function GenerarNavBuscador() {
     footNav.innerHTML = `
     <div class="footer-container">
         <div class="footer-content">
-            <div class="footer-logo">
+            <div class="footer-name">
                 <h4> CINEPIA <h4>
-            </div>
-            <div class="footer-links">
-                <ul>
-                    <li><a href="../../index.html">Inicio</a></li>
-                    <li><a href="../../src/cartelera/cartelera.html">Cartelera</a></li>
-                    <li><a href="../../src/cartelera/cartelera.html?fecha=hoy">Hoy</a></li>
-
-                </ul>
             </div>
             <div class="footer-social">
                 <ul>

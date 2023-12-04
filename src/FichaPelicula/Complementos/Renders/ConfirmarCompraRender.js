@@ -8,9 +8,9 @@ export default function GenerarCompra(funcionId,horario,fecha,disponibles) {
         <span class='texto-compra' id="disponibles" data-value=${disponibles}> DISPONIBLES: ${disponibles} </span>
         <input type="text" placeholder="Ingrese su nombre" class="input-nombre" id='input-nombre'>
         <div class="boton-comprar">
-            <span class="botones-aum-dis bor-izq" id="disminuir">-</span> 
+            <span class="botones-aum-dis bor-izq" id="disminuir"><i class='bx bx-minus'></i></span> 
             <span class="cantidad-boletos" id="contador-boletos">0</span>
-            <span class="botones-aum-dis bor-der" id="aumentar">+</span>
+            <span class="botones-aum-dis bor-der" id="aumentar"><i class='bx bx-plus'></i></span>
         </div>
         <div class="container-boton-compra">
             <span class="boton-compra">CONFIRMAR</span>

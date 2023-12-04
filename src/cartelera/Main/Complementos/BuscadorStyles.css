@@ -1,0 +1,162 @@
+/* Buscador */
+.buscador {
+  width: 100%; /* o el ancho que prefieras */
+  padding: 10px; /* ajusta según sea necesario */
+  box-sizing: border-box; /* para incluir el padding y el borde en el ancho total */
+}
+
+input:focus {
+  outline: none;
+}
+
+.buscador-titulo {
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 29px;
+  width: 200px;
+  border-radius: 4px;
+  border-style: none;
+}
+
+.calendario {
+  width: 20%;
+  margin-top: 2%;
+  background-color: #fff;
+}
+/*Fin buscador */
+
+/* Menu Desplegable */
+.container-filtrador {
+  margin-left: 10px;
+  margin-top: -7px;
+  margin-bottom: 28px;
+  border-radius: 4px;
+}
+
+.menu-filtro {
+  list-style: none;
+  padding-left: 5px;
+  margin: 0px;
+  width: auto;
+}
+
+.menu-filtro > li {
+  position: relative;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.89);
+  width: 146px;
+  padding-left: 5px;
+  padding-top: 2px;
+}
+
+.menu-filtro > li > span {
+  display: block;
+  color: black;
+  font-family: "Open sans";
+  text-decoration: none;
+}
+
+.submenu-filtro li:hover {
+  background-color: #4a759921;
+}
+
+.submenu-filtro li span:hover {
+  color: #00f;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Submenu*/
+
+.submenu-filtro {
+  position: absolute;
+  background-color: #c5c0c0;
+  border: 1px solid black;
+  border-top: none;
+  visibility: hidden;
+  opacity: 0;
+  list-style: none;
+  margin-left: -16px;
+  padding-left: 0;
+  border-radius: 2px;
+}
+
+.submenu-filtro li span {
+  padding: 13px 91px 11px 28px;
+  display: flex;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  justify-content: flex-start;
+  align-items: stretch;
+  font-size: 12px;
+}
+
+.menu-filtro li:hover .submenu-filtro {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Fin menu desplegable */
+
+/* Filtro de búsqueda */
+
+.buscador-personalizado {
+  /* display: flex;
+  max-width: 550px;
+  align-items: center;
+  justify-content: start; */
+  display: flex;
+  max-width: 550px;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: stretch;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.fecha-busqueda {
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 27px;
+  width: 200px;
+  background-color: #fff;
+  user-select: none;
+}
+
+.acomodar-fecha {
+  border-radius: 4px;
+  margin-top: 2px;
+}
+
+.separador {
+  margin: 5px;
+}
+
+.seleccionar-fecha:hover {
+  cursor: pointer;
+  color: #00f;
+}
+
+.texto-calendario {
+  align-items: center;
+  color: black;
+}
+
+.sin-pelis {
+  color: white;
+  height: 150px;
+  padding: 50px;
+}
+
+.texto-buscador {
+  color: white;
+  margin-top: 20px;
+  padding-left: 23px;
+}

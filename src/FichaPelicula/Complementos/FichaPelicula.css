@@ -18,8 +18,15 @@
 
 h1 
 {
+    padding-top: 20px;
     color: rgba(255, 255, 255, 0.788);
+    transition: color 0.3s; 
 }
+
+h1:hover {
+    color: #e75c55
+}
+
 
 .ficha-tecnica-container {
     display: flex;
@@ -47,11 +54,23 @@ h1
 .tabla-tecnica{
     height: 12%;
     color: rgba(255, 255, 255, 0.89);
+    width: 100%; /* Ajusta el ancho de la tabla al 100% del contenedor */
+    margin: auto; /* Centra la tabla horizontalmente */
+    border-collapse: collapse; /* Elimina el espacio entre las celdas si es necesario */
+}
+
+.tabla-tecnica th,
+.tabla-tecnica td,
+.titulo-imagen,
+.ficha-tecnica,
+.trailer {
+    font-weight: normal;
 }
 
 .tabla-tecnica th 
 {
     padding-bottom: 5px;
+    text-align: left;
 }
 
 .encabezado-tecnico {
@@ -78,6 +97,7 @@ h1
 
 .funciones {
     flex: 2; 
+    padding-top: 35px;
 }
 
 .container-funcion-compra h3 {
@@ -109,7 +129,7 @@ h1
     font-size: 13px;
     padding: 2px;
     color: rgba(255, 255, 255, 0.89);
-
+    font-weight: normal;
 }
 
 .funciones-disponibles th {
@@ -120,12 +140,15 @@ h1
     display: block;
 }
 
-
+.funcion {
+    font-weight: normal;
+}
 
 #funcion-compra
 {
     display: grid;
-    grid-template-columns: repeat(3,minmax(0,1fr))
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    padding-top: 15px;
 }
 
 .tabla-funciones
@@ -142,6 +165,36 @@ h1
 }
 
 /* Para ver tickets y comprar*/
+
+
+.titulo-confirmacion {
+    padding-top: 10px;
+    font-size: 24px; /* Ajusta esto según tus preferencias */
+    padding-bottom: 10px; /* Añade un poco de espacio debajo del título */
+    color: #ffffff; /* Cambia el color según sea necesario */
+}
+
+/* Estilos para las celdas de la tabla */
+.tabla-tecnica th, .tabla-tecnica td {
+    text-align: center;
+    padding: 8px; 
+    color: #ffffff; /* Establece el color del texto, ajusta según sea necesario */
+}
+
+.etiqueta {
+    text-align: left; /* Alinea las etiquetas a la izquierda */
+    font-weight: bold; /* Si quieres las etiquetas en negrita */
+}
+
+.valor {
+    text-align: right; /* Alinea los valores a la derecha */
+}
+
+.cinema-ticket {
+    font-size: 18px; /* Un tamaño de fuente menor para el subtítulo */
+    text-align: center; /* Centra el texto en la celda */
+    /* Añade cualquier otro estilo que necesites */
+}
 
 .contenedor-tickets {
     margin: 5px;
@@ -196,7 +249,7 @@ h1
 
 .botones-aum-dis:hover
 {
-    background-color: #00f;
+    background-color: #ff2c1f;
 }
 
 .bor-izq {
@@ -234,7 +287,7 @@ h1
 
 .boton-boleto:hover
 {
-    background-color: #00f;
+    background-color: #ff2c1f;
 }
 
 .input-nombre
@@ -242,13 +295,14 @@ h1
     padding-left: 10px;
     padding-top: 2px;
     margin-top: 10px;
-    border-radius: 10px;
+    border-radius: 4px;
+    height: 35px;
     width: 180px;
 }
   
 .confirmar-compra
 {
-    margin-top: 35px;
+    margin-top: 85px;
     display: flex;
     flex-flow: column wrap;
     place-content: center space-evenly;
@@ -266,6 +320,7 @@ h1
 {
     color: rgba(255, 255, 255, 0.89);
     text-decoration: none;
+    font-weight: normal;
 }
 
 .boton-compra
@@ -292,7 +347,7 @@ h1
 
 .container-boton-compra:hover
 {
-    background-color: #00f;
+    background-color: #ff2c1f;
 }
 
 /* Ventana Emergente para confirmar ticket */
@@ -308,11 +363,12 @@ h1
 }
 
 .modal-contenido {
-    background-color: rgb(19, 19, 19);
+    background-color: rgb(92, 86, 86);
     padding-left: 20px;
     padding-right: 20px;
-    border: 4px solid rgba(138, 138, 138, 0.44);
     width: 80%;
+    border-radius: 10px;
+    
 }
 
 .modal-contenido h5
@@ -324,7 +380,7 @@ h1
     color: rgba(255, 255, 255, 0.89);
     float: right;
     font-size: 35px;
-    font-weight: bold;
+    font-weight: normal;
     cursor: pointer;
 }
 

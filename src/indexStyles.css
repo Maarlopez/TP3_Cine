@@ -1,0 +1,114 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#main{
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 30px;
+}
+
+body{
+    background-color: #2a2828;
+}
+
+.imagenCartelera
+{
+  height: 255px;
+  width: 180px;
+  display: block;
+  margin: 0 auto;
+  background-color: rgba(138, 138, 138, 0.44); 
+  padding: 3px; 
+}
+
+.textoCartelera
+{
+	text-decoration: none;
+  font-size: 16px;
+  /* font-weight: bold; */
+  color: rgba(255, 255, 255, 0.788);
+  text-align: center;
+  user-select: none;
+  
+}
+
+.SeccionCartelera {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-start;
+  height: 320px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow: hidden;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 1250px;
+  /* overflow: visible; */
+}
+
+.peliculaCartelera {
+  width: 180px;
+  padding-left: 3%;
+  padding-right: 3%;
+  flex: 0 0 calc(25% - 15px);
+  margin: 20px 10px 10px 10px;
+  text-align: center;
+}
+
+.texto
+{
+  width: auto;
+
+  color: rgba(255, 255, 255, 0.788);
+}
+
+.texto:hover{
+  color: #ff2c1f;
+  transition: 0.4s all linear;
+}
+
+.scroll-arrow {
+  color: white;
+  height: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.scroll-arrow-left {
+  float: left;
+}
+
+.scroll-arrow-right {
+  float: right;
+}
+
+.contenedor-cartelera{
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-top: rgba(138, 138, 138, 0.44) solid 3px;
+}
+
+#containerAnticipadas{
+  margin-top: 15px;
+}
+
+.hover-carrousel:hover
+{
+  cursor: pointer;
+  color: #00f;
+}
+
+.sin-pelis{
+  color: white;
+  height: 150px;
+  padding: 50px;
+}

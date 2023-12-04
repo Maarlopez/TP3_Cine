@@ -38,7 +38,6 @@ function mostrarPeliculas(peliculas) {
             <h2>${pelicula.titulo}</h2>
             <img src="${pelicula.poster}" alt="Poster de ${pelicula.titulo}">
             <p>${pelicula.sinopsis}</p>
-            <!-- Más detalles de la película -->
         </div>
     `).join('');
 }
