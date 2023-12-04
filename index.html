@@ -1,77 +1,67 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="Cinepia index" content="width=device-width, initial-scale=1.0">
     <title>Cinepia</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="src/css/generalStyles.css">
+    <link rel="icon" type="image/x-icon" href="https://github.com/Lucasgomez14/complementosImagenes/blob/main/imagenesTP3/cinema.png?raw=true">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="src/indexStyles.css" />
+    <link rel="stylesheet" type="text/css" href="src/nav/navStyles.css" />
+    <link rel="stylesheet" type="text/css" href="src/footer/footerStyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </head>
 </head>
-
-<body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient p-3">
-        <div class="container-fluid">
-            <a class="navbar-brand fs-4" href="index.html">Cinepia</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link fs-4 active" aria-current="page" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fs-4" href="carrito.html">Carrito</a>
-                    </li>
-                </ul>
+<body class="container-fluid" id="body-index">
+    <header class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div id="navPrincipal"></div>
             </div>
+            <div class="col-2"></div>    
+    </header> 
+    <main class="row">
+        <div class="col-2"></div>
+        <div class="col-8" id="main">
+            <div class="row" id="containerDestacadas">
+                <a class="texto"><h3 class="textq"> DESTACADAS</h3></a>  
+                <div class="contenedor-cartelera">
+                    <div class="scroll-arrow scroll-arrow-left hover-carrousel"></div>
+                    <div class="SeccionCartelera" id="carteleraDestacada"></div>
+                    <div class="scroll-arrow scroll-arrow-right hover-carrousel"></div>    
+                </div>          
+
+            </div>
+            <div class="row" id="containerAnticipadas">
+                <a href="src/cartelera/cartelera.html?fecha=hoy"class="texto"><h3> ANTICIPADAS</h3></a>
+                <div class="contenedor-cartelera">
+                    <div class="scroll-arrow scroll-arrow-left hover-carrousel"></div>
+                    <div class="SeccionCartelera" id="carteleraAnticipada"></div>
+                    <div class="scroll-arrow scroll-arrow-right hover-carrousel"></i></div>       
+                </div>
+            </div>
+            <!-- <div class="row" id="containerTodas">
+                <a href="./src/cartelera/cartelera.html" class="texto">
+                    <h3 class="texto"> CARTELERA</h3>
+                </a>
+                <div class="contenedor-cartelera">
+                    <div class="scroll-arrow scroll-arrow-left hover-carrousel"></div>
+                    <div class="SeccionCartelera" id="cartelera"></div>
+                    <div class="scroll-arrow scroll-arrow-right hover-carrousel"></i></div>      
+                </div>
+            </div> -->
+
         </div>
-    </nav>
-
-    <!-- Contenedor principal para la búsqueda y listado de películas -->
-    <div class="container my-4">
-        <!-- Formulario de búsqueda -->
-        <form id="search-form" class="row g-3">
-            <!-- Título de la película -->
-            <div class="col-md-4">
-                <input type="text" id="titulo-pelicula" class="form-control" placeholder="Título de la película">
-            </div>
-            <!-- Género de la película -->
-            <div class="col-md-4">
-                <select id="genero-pelicula" class="form-select">
-                    <option value="">Todos los géneros</option>
-                    <!-- Opciones de género aquí -->
-                </select>
-            </div>
-            <!-- Fecha de la función -->
-            <div class="col-md-3">
-                <input type="date" id="fecha-funcion" class="form-control">
-            </div>
-            <!-- Botón de búsqueda -->
-            <div class="col-md-1">
-                <button type="submit" class="btn btn-primary">Buscar</button>
-            </div>
-        </form>
-        <!-- Resultados de búsqueda -->
-        <div id="search-results" class="row mt-4">
-            <!-- Los resultados de la búsqueda se inyectarán aquí -->
-        </div>
-    </div>
-
-    <!-- Contenedores para el contenido dinámico -->
-    <div id="funciones-container" class="container my-4">
-        <!-- Las funciones del día se cargarán aquí -->
-    </div>
-    <div id="peliculas-container" class="container my-4">
-        <!-- Las películas se cargarán aquí -->
-    </div>
-
-    <!-- Scripts al final para una carga de página optimizada -->
-    <script src="path/to/your/bootstrap.bundle.min.js" defer></script>
-    <script type="module" src="src/js/app.js" defer></script>
+        <div class="col-2"></div>
+    </main> 
+    <div id="footer-general"></div>  
+    <script type="module" src="/src/MainIndex/SectionRender.js"></script>
+    <script type="module" src="/src/MainIndex/IndexFunctions.js"></script>
+    <script type="module" src="./src/nav/navRender.js"></script>
+    <script type="module" src="./src/footer/footer.js"></script>
 </body>
 </html>
